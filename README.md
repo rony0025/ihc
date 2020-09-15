@@ -1,4 +1,3 @@
-# IHC
 \documentclass[11pt]{beamer}
 \usepackage{listings} % Include the listings-package
 \usepackage[T1]{fontenc}
