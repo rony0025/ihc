@@ -1,4 +1,6 @@
 \babel@toc {english}{}
-\beamer@sectionintoc {1}{Pautas de diseño de la interfaz de usuario}{3}{0}{1}
-\beamer@sectionintoc {2}{Koyani and col}{4}{0}{2}
-\beamer@sectionintoc {3}{References}{5}{0}{3}
+\beamer@sectionintoc {1}{Koyani ,breve biografia}{3}{0}{1}
+\beamer@sectionintoc {2}{Koyani ,breve biografia 2}{4}{0}{2}
+\beamer@sectionintoc {3}{Pautas de dise\IeC {\~n}o de la interfaz de usuario}{5}{0}{3}
+\beamer@sectionintoc {4}{Koyani and col}{6}{0}{4}
+\beamer@sectionintoc {5}{References}{7}{0}{5}
