@@ -1,2 +1,8 @@
 \babel@toc {english}{}
 \beamer@sectionintoc {1}{Aqui Pondremos la primera Diapo}{3}{0}{1}
+\beamer@sectionintoc {2}{Elegir el estilo del juego}{4}{0}{2}
+\beamer@sectionintoc {3}{Diseño de personajes}{6}{0}{3}
+\beamer@subsectionintoc {3}{1}{Borradores y bocetos}{6}{0}{3}
+\beamer@subsectionintoc {3}{2}{Conceptualización}{7}{0}{3}
+\beamer@subsectionintoc {3}{3}{Movimiento}{8}{0}{3}
+\beamer@subsectionintoc {3}{4}{Jugabilidad}{9}{0}{3}

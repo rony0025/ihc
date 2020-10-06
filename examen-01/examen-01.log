@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.12)  5 OCT 2020 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.12)  5 OCT 2020 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,7 +1072,7 @@ ut line 80.
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<img/logo_unsa.jpg, id=24, 96.36pt x 33.2442pt>
+<img/logo_unsa.jpg, id=48, 96.36pt x 33.2442pt>
 File: img/logo_unsa.jpg Graphic file (type jpg)
 <use img/logo_unsa.jpg>
 Package pdftex.def Info: img/logo_unsa.jpg  used on input line 80.
@@ -1089,6 +1089,89 @@ Overfull \vbox (38.00406pt too high) detected at line 80
 ] [3
 
 ]
+<img/estilos de juego.jpg, id=152, 1003.75pt x 592.2125pt>
+File: img/estilos de juego.jpg Graphic file (type jpg)
+<use img/estilos de juego.jpg>
+Package pdftex.def Info: img/estilos de juego.jpg  used on input line 104.
+(pdftex.def)             Requested size: 301.12732pt x 177.66512pt.
+
+Overfull \vbox (24.50334pt too high) detected at line 104
+ []
+
+[4
+
+ <./img/estilos de juego.jpg>]
+<img/colorgama.png, id=180, 342.5297pt x 348.55219pt>
+File: img/colorgama.png Graphic file (type png)
+<use img/colorgama.png>
+Package pdftex.def Info: img/colorgama.png  used on input line 116.
+(pdftex.def)             Requested size: 102.75969pt x 104.56645pt.
+ [5
+
+ <./img/colorgama.png>]
+
+LaTeX Warning: File `img/BOCETOS_oso.png' not found on input line 128.
+
+
+! Package pdftex.def Error: File `img/BOCETOS_oso.png' not found: using draft s
+etting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 12
+8.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [6
+
+]
+
+LaTeX Warning: File `img/conceptualizacion.png' not found on input line 142.
+
+
+! Package pdftex.def Error: File `img/conceptualizacion.png' not found: using d
+raft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[7
+
+]
+
+LaTeX Warning: File `img/lapiz.png' not found on input line 160.
+
+
+! Package pdftex.def Error: File `img/lapiz.png' not found: using draft setting
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[8
+
+] [9
+
+]
 \tf@nav=\write6
 \openout6 = `examen-01.nav'.
 
@@ -1103,32 +1186,35 @@ Overfull \vbox (38.00406pt too high) detected at line 80
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 35.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
 (./examen-01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
 Package rerunfilecheck Info: File `examen-01.out' has not changed.
-(rerunfilecheck)             Checksum: B68DE1AA38C81F0104BF636B8742E838;66.
+(rerunfilecheck)             Checksum: BC64F7B124A8C7E94E02CD4C13816901;442.
  ) 
 Here is how much of TeX's memory you used:
- 21748 strings out of 481239
- 403541 string characters out of 5920377
- 676964 words of memory out of 5000000
- 36466 multiletter control sequences out of 15000+600000
- 547186 words of font info for 64 fonts, out of 8000000 for 9000
+ 22001 strings out of 481239
+ 408695 string characters out of 5920377
+ 676941 words of memory out of 5000000
+ 36674 multiletter control sequences out of 15000+600000
+ 549337 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,15n,67p,828b,669s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
-fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfsx2488.pfb>
-Output written on examen-01.pdf (3 pages, 119086 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/c
+m-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfss0900.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfsx2488.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/courier/ucrr8a.pfb>
+Output written on examen-01.pdf (9 pages, 878995 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 8 named destinations out of 1000 (max. 500000)
- 80 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
