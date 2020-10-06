@@ -13,4 +13,5 @@
 \beamer@subsectionintoc {7}{1}{Historia del Escenario}{12}{0}{7}
 \beamer@subsectionintoc {7}{2}{Dinamicas Compositivas}{13}{0}{7}
 \beamer@subsectionintoc {7}{3}{Perspectiva y color}{14}{0}{7}
-\beamer@sectionintoc {8}{Referencias}{15}{0}{8}
+\beamer@sectionintoc {8}{Propuestas}{15}{0}{8}
+\beamer@sectionintoc {9}{Referencias}{16}{0}{9}
