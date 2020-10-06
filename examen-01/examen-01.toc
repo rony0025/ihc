@@ -1,15 +1,16 @@
 \babel@toc {english}{}
-\beamer@sectionintoc {1}{Aqui Pondremos la primera Diapo}{3}{0}{1}
+\beamer@sectionintoc {1}{Introducción}{3}{0}{1}
 \beamer@sectionintoc {2}{Elegir el estilo del juego}{4}{0}{2}
 \beamer@sectionintoc {3}{Importancia del color}{5}{0}{3}
 \beamer@sectionintoc {4}{Colores Complementarios}{6}{0}{4}
-\beamer@sectionintoc {5}{Colores complementarios}{7}{0}{5}
-\beamer@sectionintoc {6}{Dise\IeC {\~n}o de personajes}{8}{0}{6}
+\beamer@sectionintoc {5}{Circulo Cromático}{7}{0}{5}
+\beamer@sectionintoc {6}{Diseño de personajes}{8}{0}{6}
 \beamer@subsectionintoc {6}{1}{Borradores y bocetos}{8}{0}{6}
-\beamer@subsectionintoc {6}{2}{Conceptualizaci\IeC {\'o}n}{9}{0}{6}
+\beamer@subsectionintoc {6}{2}{Conceptualización}{9}{0}{6}
 \beamer@subsectionintoc {6}{3}{Movimiento}{10}{0}{6}
 \beamer@subsectionintoc {6}{4}{Jugabilidad}{11}{0}{6}
-\beamer@sectionintoc {7}{Dise\IeC {\~n}o de Escenario}{12}{0}{7}
+\beamer@sectionintoc {7}{Diseño de Escenario}{12}{0}{7}
 \beamer@subsectionintoc {7}{1}{Historia del Escenario}{12}{0}{7}
 \beamer@subsectionintoc {7}{2}{Dinamicas Compositivas}{13}{0}{7}
 \beamer@subsectionintoc {7}{3}{Perspectiva y color}{14}{0}{7}
+\beamer@sectionintoc {8}{Referencias}{15}{0}{8}
