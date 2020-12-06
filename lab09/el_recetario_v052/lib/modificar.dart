@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:el_recetario_v052/generated/l10n.dart';
 
 class Modificar extends StatefulWidget {
   @override
@@ -19,7 +19,7 @@ class _ModificarState extends State<Modificar> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Nombre de la receta',
+          S.of(context).nombredereceta,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -50,7 +50,7 @@ class _ModificarState extends State<Modificar> {
                   Icons.article_outlined,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Pequeña receta',
+                hintText: S.of(context).nombredereceta,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -75,7 +75,7 @@ class _ModificarState extends State<Modificar> {
         ),
         color: Colors.white,
         child: Text(
-          'VOLVER',
+          S.of(context).botonvolver,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 18,
@@ -90,7 +90,7 @@ class _ModificarState extends State<Modificar> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Categoria',
+          S.of(context).categoria,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -121,7 +121,7 @@ class _ModificarState extends State<Modificar> {
                   Icons.article_outlined,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Categoria',
+                hintText: S.of(context).categoria,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -136,7 +136,7 @@ class _ModificarState extends State<Modificar> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Ingredientes',
+          S.of(context).ingredientes,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -182,7 +182,7 @@ class _ModificarState extends State<Modificar> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Preparacion',
+          S.of(context).preparacion,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -236,7 +236,7 @@ class _ModificarState extends State<Modificar> {
         ),
         color: Colors.white,
         child: Text(
-          'GUARDAR',
+          S.of(context).botonregistrarse,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 16,
@@ -282,7 +282,7 @@ class _ModificarState extends State<Modificar> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Modificar Receta',
+                      S.of(context).modificarreceta,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
