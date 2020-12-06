@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'generated/l10n.dart';
+
+import 'crud.dart';
 
 class Borrar extends StatefulWidget {
   @override
@@ -22,7 +25,7 @@ class _BorrarState extends State<Borrar> {
         ),
         color: Colors.white,
         child: Text(
-          'SI',
+          S.of(context).botonsi,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 18,
@@ -46,7 +49,7 @@ class _BorrarState extends State<Borrar> {
         ),
         color: Colors.white,
         child: Text(
-          'NO',
+          S.of(context).botonno,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 18,
@@ -57,20 +60,23 @@ class _BorrarState extends State<Borrar> {
     );
   }
 
-  Widget buildLoginBtn() {
+  Widget buildVolverBtn() {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
       child: RaisedButton(
         elevation: 5,
-        onPressed: () => print('Guardar presionado'),
+        onPressed: () => {
+          print("Volver Presionado"),
+          Navigator.pop(context)
+        },
         padding: EdgeInsets.all(15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
         color: Colors.white,
         child: Text(
-          'VOLVER',
+          S.of(context).botonvolver,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 18,
@@ -110,7 +116,7 @@ class _BorrarState extends State<Borrar> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      '¿Borrar Receta?',
+                      S.of(context).borrarreceta,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
@@ -131,7 +137,7 @@ class _BorrarState extends State<Borrar> {
                     SizedBox(
                       height: 10,
                     ),
-                    buildLoginBtn(),
+                    buildVolverBtn(),
                     SizedBox(
                       height: 20,
                     ),

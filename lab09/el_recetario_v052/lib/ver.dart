@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'crud.dart';
+import 'generated/l10n.dart';
+
 class Ver extends StatefulWidget {
   @override
   _VerState createState() => _VerState();
@@ -18,7 +21,7 @@ class _VerState extends State<Ver> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Nombre de la receta',
+          S.of(context).nombredereceta,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -50,7 +53,7 @@ class _VerState extends State<Ver> {
                   Icons.article_outlined,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Pequeña receta',
+                hintText: S.of(context).verreceta,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -65,7 +68,7 @@ class _VerState extends State<Ver> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Categoria',
+          S.of(context).categoria,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -97,7 +100,7 @@ class _VerState extends State<Ver> {
                   Icons.article_outlined,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Categoria',
+                hintText: S.of(context).categoria,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -112,7 +115,7 @@ class _VerState extends State<Ver> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Ingredientes',
+          S.of(context).ingredientes,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -159,7 +162,7 @@ class _VerState extends State<Ver> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Preparacion',
+          S.of(context).preparacion,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -201,20 +204,23 @@ class _VerState extends State<Ver> {
     );
   }
 
-  Widget buildLoginBtn() {
+  Widget buildVolverBtn() {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
       child: RaisedButton(
         elevation: 5,
-        onPressed: () => print('Guardar presionado'),
+        onPressed: () => {
+          print("Volver Presionado"),
+          Navigator.pop(context)
+        },
         padding: EdgeInsets.all(15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
         color: Colors.white,
         child: Text(
-          'VOLVER',
+          S.of(context).botonvolver,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 18,
@@ -260,7 +266,7 @@ class _VerState extends State<Ver> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Ver Receta',
+                      S.of(context).verreceta,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
@@ -286,7 +292,7 @@ class _VerState extends State<Ver> {
                     SizedBox(
                       height: 20,
                     ),
-                    buildLoginBtn(),
+                    buildVolverBtn(),
                     SizedBox(
                       height: 20,
                     ),

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'recovery.dart';
 import 'register.dart';
 import 'crud.dart';
+import 'package:el_recetario_v052/generated/l10n.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _LoginState extends State<Login> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Email',
+          S.of(context).correo,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -47,7 +48,7 @@ class _LoginState extends State<Login> {
                   Icons.email,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Email',
+                hintText: S.of(context).correo,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -62,7 +63,7 @@ class _LoginState extends State<Login> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Password',
+          S.of(context).contrasenia,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -92,7 +93,7 @@ class _LoginState extends State<Login> {
                   Icons.lock,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Password',
+                hintText: S.of(context).contrasenia,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -113,7 +114,7 @@ class _LoginState extends State<Login> {
         },
         padding: EdgeInsets.only(right: 0),
         child: Text(
-          'Forgot Password?',
+          S.of(context).contraseniaolvidada,
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -142,7 +143,7 @@ class _LoginState extends State<Login> {
             ),
           ),
           Text(
-            'Guardar inicio de sesión',
+            S.of(context).guardarinicio,
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -171,7 +172,7 @@ class _LoginState extends State<Login> {
         ),
         color: Colors.white,
         child: Text(
-          'INGRESO',
+          S.of(context).botoningreso,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 18,
@@ -192,13 +193,13 @@ class _LoginState extends State<Login> {
       child: RichText(
         text: TextSpan(children: [
           TextSpan(
-              text: '¿No tienes una cuenta?',
+              text: S.of(context).registrateaqui1,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w500)),
           TextSpan(
-              text: ' Sign Up',
+              text: S.of(context).registrateaqui2,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 18,
@@ -238,10 +239,21 @@ class _LoginState extends State<Login> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Bienvenido a Tus Recetas Fáciles 1.0',
+                      'El Recetario v0.52',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      S.of(context).saludos,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

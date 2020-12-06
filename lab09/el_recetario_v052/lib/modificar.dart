@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
 class Modificar extends StatefulWidget {
   @override
   _ModificarState createState() => _ModificarState();
@@ -58,7 +59,32 @@ class _ModificarState extends State<Modificar> {
       ],
     );
   }
-
+  Widget buildVolverBtn() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 25),
+      width: double.infinity,
+      child: RaisedButton(
+        elevation: 5,
+        onPressed: () => {
+          print("Volver Presionado"),
+          Navigator.pop(context)
+        },
+        padding: EdgeInsets.all(15),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        color: Colors.white,
+        child: Text(
+          'VOLVER',
+          style: TextStyle(
+            color: Color(0xff5ac18e),
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
   Widget buildCategoria() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -197,7 +223,7 @@ class _ModificarState extends State<Modificar> {
     );
   }
 
-  Widget buildLoginBtn() {
+  Widget buildGuardarBtn() {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
@@ -210,10 +236,10 @@ class _ModificarState extends State<Modificar> {
         ),
         color: Colors.white,
         child: Text(
-          'MODIFICAR',
+          'GUARDAR',
           style: TextStyle(
             color: Color(0xff5ac18e),
-            fontSize: 5,
+            fontSize: 16,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -282,10 +308,8 @@ class _ModificarState extends State<Modificar> {
                     SizedBox(
                       height: 20,
                     ),
-                    buildLoginBtn(),
-                    SizedBox(
-                      height: 20,
-                    ),
+                    buildGuardarBtn(),
+                    buildVolverBtn(),
                   ],
                 ),
               ),

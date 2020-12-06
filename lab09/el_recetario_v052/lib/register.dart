@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:el_recetario_v052/generated/l10n.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -31,7 +32,7 @@ class _RegisterState extends State<Register> {
                   Icons.person,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'FullName',
+                hintText: S.of(context).ingresatunombre,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -65,7 +66,7 @@ class _RegisterState extends State<Register> {
                   Icons.email,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Email',
+                hintText: S.of(context).ingresamail,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -99,7 +100,7 @@ class _RegisterState extends State<Register> {
                   Icons.call,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Phone Number',
+                hintText: S.of(context).ingresatunumero,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -133,7 +134,7 @@ class _RegisterState extends State<Register> {
                   Icons.lock,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Password',
+                hintText: S.of(context).contrasenia,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -156,7 +157,7 @@ class _RegisterState extends State<Register> {
         ),
         color: Colors.white,
         child: Text(
-          'REGISTER',
+          S.of(context).botonregistrarse,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 18,
@@ -168,6 +169,32 @@ class _RegisterState extends State<Register> {
   }
 
   @override
+  Widget buildVolverBtn() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 25),
+      width: double.infinity,
+      child: RaisedButton(
+        elevation: 5,
+        onPressed: () => {
+          print("Volver Presionado"),
+          Navigator.pop(context)
+        },
+        padding: EdgeInsets.all(15),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        color: Colors.white,
+        child: Text(
+          S.of(context).botonvolver,
+          style: TextStyle(
+            color: Color(0xff5ac18e),
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnnotatedRegion<SystemUiOverlayStyle>(
@@ -196,7 +223,7 @@ class _RegisterState extends State<Register> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Register',
+                      S.of(context).registrarse,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
@@ -223,6 +250,7 @@ class _RegisterState extends State<Register> {
                       height: 20,
                     ),
                     buildRegisterBtn(),
+                    buildVolverBtn(),
                   ],
                 ),
               ),

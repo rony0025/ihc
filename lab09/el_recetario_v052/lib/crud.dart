@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'crear.dart';
+import 'generated/l10n.dart';
 import 'ver.dart';
 import 'modificar.dart';
 import 'borrar.dart';
@@ -29,7 +30,7 @@ class _CRUDState extends State<CRUD> {
         ),
         color: Colors.white,
         child: Text(
-          'INSERTAR RECETA',
+          S.of(context).botoninsertar,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 14,
@@ -40,6 +41,32 @@ class _CRUDState extends State<CRUD> {
     );
   }
 
+  Widget buildLogoutBtn() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 25),
+      width: double.infinity,
+      child: RaisedButton(
+        elevation: 5,
+        onPressed: () => {
+          print("Logout Presionado"),
+          Navigator.pop(context)
+        },
+        padding: EdgeInsets.all(4),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        color: Colors.white,
+        child: Text(
+          S.of(context).cerrarsesion,
+          style: TextStyle(
+            color: Color(0xff5ac18e),
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
   Widget buildlistRecipes() {
     return Table(
       children: <TableRow>[
@@ -50,7 +77,7 @@ class _CRUDState extends State<CRUD> {
           buildBorrarBtn(),
         ],),
         TableRow(children: <Widget>[
-          Text('\n\nCeviche'),
+          Text('\n\Arroz Con Pollo 2'),
           buildVerBtn(),
           buildModificarBtn(),
           buildBorrarBtn(),
@@ -78,7 +105,7 @@ class _CRUDState extends State<CRUD> {
         ),
         color: Colors.white,
         child: Text(
-          'VER',
+          S.of(context).botonver,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 12,
@@ -107,7 +134,7 @@ class _CRUDState extends State<CRUD> {
         ),
         color: Colors.white,
         child: Text(
-          'MODIFICAR',
+          S.of(context).botonmodificar,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 12,
@@ -136,7 +163,7 @@ class _CRUDState extends State<CRUD> {
         ),
         color: Colors.white,
         child: Text(
-          'BORRAR',
+          S.of(context).botonborrar,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 12,
@@ -175,7 +202,7 @@ class _CRUDState extends State<CRUD> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Lista Personal de Recetas',
+                      S.of(context).listapersonalderecetas,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
@@ -187,6 +214,7 @@ class _CRUDState extends State<CRUD> {
                     ),
                     buildCrearBtn(),
                     buildlistRecipes(),
+                    buildLogoutBtn()
                   ],
                 ),
               ),

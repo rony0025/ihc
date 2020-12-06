@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:el_recetario_v052/generated/l10n.dart';
 
 class RecoveryPassword extends StatefulWidget {
   @override
@@ -7,12 +8,38 @@ class RecoveryPassword extends StatefulWidget {
 }
 
 class _RecoveryPasswordState extends State<RecoveryPassword> {
+  Widget buildVolverBtn() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 25),
+      width: double.infinity,
+      child: RaisedButton(
+        elevation: 5,
+        onPressed: () => {
+          print("Volver Presionado"),
+          Navigator.pop(context)
+        },
+        padding: EdgeInsets.all(15),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        color: Colors.white,
+        child: Text(
+          S.of(context).botonvolver,
+          style: TextStyle(
+            color: Color(0xff5ac18e),
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
   Widget buildEmail() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Enter your Email:',
+          S.of(context).ingresamail,
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -42,7 +69,7 @@ class _RecoveryPasswordState extends State<RecoveryPassword> {
                   Icons.email,
                   color: Color(0xff5ac18e),
                 ),
-                hintText: 'Email',
+                hintText: S.of(context).correo,
                 hintStyle: TextStyle(
                   color: Colors.black38,
                 )),
@@ -65,7 +92,7 @@ class _RecoveryPasswordState extends State<RecoveryPassword> {
         ),
         color: Colors.white,
         child: Text(
-          'SEND',
+          S.of(context).botonenviar,
           style: TextStyle(
             color: Color(0xff5ac18e),
             fontSize: 18,
@@ -105,7 +132,7 @@ class _RecoveryPasswordState extends State<RecoveryPassword> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Reset Password',
+                      S.of(context).resetearpassword,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
@@ -120,6 +147,7 @@ class _RecoveryPasswordState extends State<RecoveryPassword> {
                       height: 20,
                     ),
                     buildSendBtn(),
+                    buildVolverBtn(),
                   ],
                 ),
               ),
