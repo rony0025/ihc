@@ -12,20 +12,20 @@ class failed_login extends StatelessWidget {
     seriesList=_createSampleData();
     return Scaffold(
         backgroundColor: Color(0xff5ac18e),
-    body: Center(
+        body: Center(
 
-    child: Stack(
-        children: <Widget>[ Text(
-        "Failed Login Attemps",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 40,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      new charts.PieChart(seriesList, animate: animate),
-    ]
-    )));
+            child: Stack(
+                children: <Widget>[ Text(
+                  "Failed Login Attemps",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                  new charts.PieChart(seriesList, animate: animate),
+                ]
+            )));
 
   }
 

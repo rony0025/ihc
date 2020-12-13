@@ -4,6 +4,7 @@ import 'recovery.dart';
 import 'register.dart';
 import 'crud.dart';
 import 'package:el_recetario_v052/generated/l10n.dart';
+import 'homepage.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -210,6 +211,27 @@ class _LoginState extends State<Login> {
     );
   }
 
+  Widget buildGeneralStadisticButton() {
+    return Container(
+      alignment: Alignment.center,
+      child: FlatButton(
+        onPressed: () => {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => HomePage(),
+          ))
+        },
+        padding: EdgeInsets.only(right: 0),
+        child: Text(
+          'Ver Estadisticas del uso de la aplicacion',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -217,64 +239,65 @@ class _LoginState extends State<Login> {
         value: SystemUiOverlayStyle.light,
         child: GestureDetector(
             child: Stack(
-          children: <Widget>[
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0x665ac18e),
-                      Color(0x995ac18e),
-                      Color(0xcc5ac18e),
-                      Color(0xff5ac18e),
-                    ]),
-              ),
-              child: SingleChildScrollView(
-                physics: AlwaysScrollableScrollPhysics(),
-                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 120),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'El Recetario v0.52',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                      ),
+              children: <Widget>[
+                Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0x665ac18e),
+                          Color(0x995ac18e),
+                          Color(0xcc5ac18e),
+                          Color(0xff5ac18e),
+                        ]),
+                  ),
+                  child: SingleChildScrollView(
+                    physics: AlwaysScrollableScrollPhysics(),
+                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 120),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'El Recetario v0.52',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          S.of(context).saludos,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 50,
+                        ),
+                        buildEmail(),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        buildPassword(),
+                        buildForgotPasswordBtn(),
+                        buildRememberCb(),
+                        buildLoginBtn(),
+                        buildSignUpBtn(),
+                        buildGeneralStadisticButton(),
+                      ],
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      S.of(context).saludos,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 50,
-                    ),
-                    buildEmail(),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    buildPassword(),
-                    buildForgotPasswordBtn(),
-                    buildRememberCb(),
-                    buildLoginBtn(),
-                    buildSignUpBtn(),
-                  ],
-                ),
-              ),
-            )
-          ],
-        )),
+                  ),
+                )
+              ],
+            )),
       ),
     );
   }

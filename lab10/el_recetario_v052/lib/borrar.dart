@@ -94,59 +94,59 @@ class _BorrarState extends State<Borrar> {
         value: SystemUiOverlayStyle.light,
         child: GestureDetector(
             child: Stack(
-          children: <Widget>[
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0x665ac18e),
-                      Color(0x995ac18e),
-                      Color(0xcc5ac18e),
-                      Color(0xff5ac18e),
-                    ]),
-              ),
-              child: SingleChildScrollView(
-                physics: AlwaysScrollableScrollPhysics(),
-                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 120),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      S.of(context).borrarreceta,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      ),
+              children: <Widget>[
+                Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0x665ac18e),
+                          Color(0x995ac18e),
+                          Color(0xcc5ac18e),
+                          Color(0xff5ac18e),
+                        ]),
+                  ),
+                  child: SingleChildScrollView(
+                    physics: AlwaysScrollableScrollPhysics(),
+                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 120),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          S.of(context).borrarreceta,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 50,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        buildsiBtn(),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        buildnoBtn(),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        buildVolverBtn(),
+                        SizedBox(
+                          height: 20,
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 50,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    buildsiBtn(),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    buildnoBtn(),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    buildVolverBtn(),
-                    SizedBox(
-                      height: 20,
-                    ),
-                  ],
-                ),
-              ),
-            )
-          ],
-        )),
+                  ),
+                )
+              ],
+            )),
       ),
     );
   }

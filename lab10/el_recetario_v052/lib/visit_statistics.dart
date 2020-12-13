@@ -3,23 +3,23 @@ import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class visit_statistics extends StatelessWidget {
-List<charts.Series> seriesList;
-bool animate = false;
+  List<charts.Series> seriesList;
+  bool animate = false;
 
   @override
   Widget build(BuildContext context) {
     seriesList=_createSampleData();
 
     return Scaffold(
-      backgroundColor: Color(0xff5ac18e),
-      body: Center(
+        backgroundColor: Color(0xff5ac18e),
+        body: Center(
 
-        child: new charts.BarChart(
-          seriesList,
-          animate: animate,
-          vertical: false,
+            child: new charts.BarChart(
+              seriesList,
+              animate: animate,
+              vertical: false,
+            )
         )
-      )
     );
     // For horizontal bar charts, set the [vertical] flag to false.
 
