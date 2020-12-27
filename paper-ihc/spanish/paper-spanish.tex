@@ -1,0 +1,807 @@
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[conference, letterpaper]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+%\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%\usepackage{subcaption}
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+   \usepackage[pdftex]{graphicx}
+\else
+\fi
+
+% *** MATH PACKAGES ***
+%
+\usepackage[cmex10]{amsmath}
+\usepackage{color}
+%
+\usepackage{fancyhdr}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\renewcommand{\thispagestyle}[2]{} 
+
+\fancypagestyle{plain}{
+        \fancyhead{}
+        \fancyhead[C]{first page center header}
+        \fancyfoot{}
+        \fancyfoot[C]{first page center footer}
+}
+\pagestyle{fancy}
+
+
+\headheight 20pt
+\footskip 20pt
+
+\rhead{}
+
+%Enter the first page number of your paper below
+\setcounter{page}{1}
+
+%Header  --------------------------------------------------
+\fancyhead[R]{\textit{(IJACSA) International Journal of Advanced Computer Science and Applications, \\ Vol. XXX, No. XXX, 2020}}
+\renewcommand{\headrulewidth}{0pt}
+
+%Footer  www.ijacsa.thesai.org
+\fancyfoot[C]{www.ijacsa.thesai.org}
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyfoot[R]{\thepage \  $|$ P a g e }
+
+
+\begin{document}
+
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Diseño Interfaces en Videojuegos Educativos para la Motivación en el Aprendizaje}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{
+\IEEEauthorblockN{Jeampier Anderson Moran Fuño}
+\IEEEauthorblockA{Universidad Nacional de San Agustín\\
+Correo: jmoran@unsa.edu.pe}
+\and
+\IEEEauthorblockN{Rudy Roberto Tito Durand}
+\IEEEauthorblockA{Universidad Nacional de San Agustín\\
+Correo: rtitod@unsa.edu.pe}
+\and
+\IEEEauthorblockN{Marcelo Andre Guevara Gutierrez}
+\IEEEauthorblockA{Universidad Nacional de San Agustín\\
+Correo: mguevarag@unsa.edu.pe}
+\and
+\IEEEauthorblockN{Rony Tito Ventura Ramos}
+\IEEEauthorblockA{Universidad Nacional de San Agustín\\
+Correo: rventurar@unsa.edu.pe}
+\and
+\IEEEauthorblockN{Richart Smith Escobedo Quispe}
+\IEEEauthorblockA{Universidad Nacional de San Agustín\\
+Facultad de Ingeniería de Producción y Servicios \\
+Departamento Académico de Ingeniería de Sistemas e Informática\\
+Escuela Profesional de Ingeniería de Sistemas\\
+Curso de Interacción Humano Computador\\
+Sitio-Web: https://dlince.com/~richarteq/ \\
+Correo: rescobedoq@unsa.edu.pe}}
+
+
+%\author{\IEEEauthorblockN{Michael Shell}
+%\IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
+%Georgia Institute of Technology\\
+%Atlanta, Georgia 30332--0250\\
+%Email: http://www.michaelshell.org/contact.html}
+%\and
+%\IEEEauthorblockN{Homer Simpson}
+%\IEEEauthorblockA{Twentieth Century Fox\\
+%Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\and
+%\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+%\IEEEauthorblockA{Starfleet Academy\\
+%San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212\\
+%Fax: (888) 555--1212}}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+%\boldmath
+El diseño de interfaces siempre ha sido un tema de relevancia en cualquier tipo de proyecto ya que es aquella capa que es
+mediadora entre el usuario y los códigos desarrollados por lo tanto el diseño debe ser el más adecuado tanto funcionalmente como atractivamente hablando, por ello se deben usar nuevas metodologías e instrumentos para incrementar la eficiencia en el
+desarrollo de estas actividades. En este trabajo se han analizado artículos relacionados al desarrollo de videojuegos y se ha
+planteado una forma para integrarlo al desarrollo de interfaces como una actividad complementaria. De los artículos analizados se ha observado que el uso de videojuegos resulta tan efectivo para desarrollar los conceptos propuestos como motivante para
+incentivar a los estudiantes a pensar en las lecciones como algo divertido e interesante que algo monótono y repetitivo. Los resultados obtenidos pueden servir como evidencia para incluir estas actividades en el plan de estudios del curso de interacción humano computador.
+\end{abstract}
+
+\begin{abstract}
+Interface design has always been a relevant issue in any
+type of project since it is the layer that mediates between the user
+and the developed codes. Therefore, the design must be the most
+adequate one, both functionally and attractively speaking, so new
+methodologies and tools must be used to increase the efficiency in
+the development of these activities. In this work, articles related to
+the development of video games have been analyzed and a way to
+integrate it into the development of interfaces as a complementary
+activity has been proposed. From the articles analyzed it has been
+observed that the use of video games is as effective to develop the
+proposed concepts as it is motivating to encourage students to think
+about the lessons as something fun and interesting than something
+monotonous and repetitive. The results obtained can serve as
+evidence to include these activities in the human computer interaction course.
+\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the conference you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals/conferences frown on
+% math in the abstract anyway.
+
+% no keywords
+
+
+\begin{IEEEkeywords}
+videojuegos; estudiantes; educación; diseño.
+\end{IEEEkeywords}
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introducción}
+% no \IEEEPARstart
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+%\hfill mds
+%\hfill January 11, 2007
+
+El diseño de interfaces siempre ha sido una tarea muy desafiante, debido a los múltiples factores que tienen que enfrentar el equipo desarrollador[1], lo mismo sucede en el caso del desarrollo de videojuegos como los escenarios, personajes jugabilidad y sensaciones que quieren transmitir al jugador, las cuales si se logran ejecutar bien harán que más de las ramas pedagógicas y psicológicas, ya que son las que jugadores sean atraídos al juego y este será exitoso. En nuestro caso tendremos que buscar las maneras de hacer un buen juego para llegar al alumno, para poder afianzar los conocimientos que le intentamos transmitir, para lo cual tendremos que analizar ciertas teorías, tanto de desarrollo de videojuegos como psicológicos y pedagógicos, además de tratar el tema del rol del jugador respecto al juego, ya que si este lo percibe como una actividad escolar, este se aburrirá y no podremos llevar a cabo nuestro objetivo de enseñanza[2].
+
+%------------ Paragraph ------------------------
+Bajo el marco presentado para lograr con el objetivo trazado, anteriormente mencionado, es necesario realizar un revisión  tendrán mayor impacto en el momento que el estudiante interactúa con el juego, principalmente en el desarrollo de los personajes y la historia del juego, este elemento es muy importante ya que en el desarrollo de la historia se puede recalcar distintos puntos de vista lo cual incitará a la curiosidad al estudiante [2,3]. Además, el juego a desarrollar debe cumplir con los lineamientos de la currícula educativa según la región en el cual se aplicará[2], de los puntos anteriormente mencionados usted encontrará en este artículo recomendaciones acerca del desarrollo de personajes, paisajes y en la narrativa de la historia, se omitieron los lineamientos de la currícula educativa ya que esto varía según país. 
+
+%------------ Paragraph ------------------------
+El artículo está organizado de la siguiente manera. En la sección II se presentan los Trabajos Relacionados. En la sección III se presenta la definición de Interfaces con sus respectivas características. En la sección IV se expone los videojuegos y como ha estado influenciando el ámbito educativo. En la sección V se presentan casos de análisis como las Interfaces en videojuegos tienen que ser desarrollados de una buena manera. En la sección VI se muestra el análisis, prioridades frente a las interfaces, así como también que tan buen papel desempeña. Y finalmente en la sección VIII se muestran las conclusiones.
+
+\section{Marco Teórico}
+\subsection{Interfaz}
+Albornoz[1] indica que las interfaces tienen un papel fundamental para que un producto sea o no competitivo. Esto reside principalmente en la maniobrabilidad con la cual un usuario puede realizar correctamente una acción. La interfaz de Usuario es la parte del software que las personas pueden ver, oír, tocar, hablar; es decir, donde se pueden entender. La Interfaz de usuario tiene esencialmente dos componentes, la entrada y la salida, la entrada es cómo una persona le comunica sus necesidades o deseos a la computadora.
+\subsection{Videojuegos}
+Los videojuegos son una actividad de entretenimiento, normalmente realizada por niños y adolescentes con el equipo necesario para dicha actividad, en el cual los jugadores controlan el movimiento de las imágenes en una pantalla [4], [5]. Además esta es una actividad voluntaria e interactiva; en el cual uno o más jugadores siguen reglas las cuales son acordadas antes del inicio del juego para evitar conflictos; la base de un videojuego es la narrativa e interacción con el jugador [2, 6].
+
+%------------ Paragraph ------------------------
+Lo más importante sobre los videojuegos es que se centran en sí mismos a diferencia del cine o la literatura los cuales se centran en la historia; en un videojuego todo gira entorno a la experiencia del jugador, mayormente los diseñadores de videojuegos buscan crear un marco atractivo para el juego, por tanto los videojuegos se ven más como simulaciones[6]. Sin embargo eso no significa que la narrativa sea menos importante ya que esto depende de los elementos narrativos con los cuales disponga el videojuego; por lo tanto la narrativa de un juego varía de acuerdo a la interacción que se desea tener con el jugador, la narrativa puede ser experimental, descriptiva, argumentativa, etcétera [6].
+\subsection{Jugar y Aprender}
+%Subsection text here.
+Jugar y aprender son dos dimensiones diferentes, pero que pueden ser experimentados mientras se juega, el jugador o jugadora no tienen la intención de aprender muy por el contrario solo desea entretenerse [3], gracias a investigaciones anteriores como los desarrollados por Begoña Gros, en los cuales se realizó el estudio en adolescentes, se realizaron encuestas, se les consultó a los estudiantes si alguna vez tuvieron alguna experiencia de aprendizaje mediante los videojuegos, sorpresivamente la respuesta fue no ya que ellos se concentraban en el juego en sí [3,6].
+
+%------------ Paragraph ------------------------
+Sin embargo dependiendo del género y temática del videojuego los alumnos podían ser capaces de aprender, esto ocurre por ejemplo con los videojuegos como Call of Duty, los géneros de estrategia como Age of Empires y juegos parecidos a estos , si se tiene conocimientos previos se puede aprender bastante de pequeños detalles. Por lo tanto el docente puede hacer uso de los videojuegos para complementar el aprendizaje de los alumnos [3]. 
+\section{Metodología}
+Lo que se está realizando es una recopilación y análisis de dos implicaciones al momento de distinguir la importancia de los videojuegos en la educación y como estos tienen que realizarse, para poder generar un grado de satisfacción en las persona y en base a los resultados de cada análisis se realizará una implementación básica de un plan de estudios adecuado usando las herramientas relacionadas al tema del artículo en búsqueda de una posible propuesta oficial para un sílabo verídico.
+\section{Análisis}
+Los autores Cabrera, Gonzalez y Gutierrez[7] presentan una implementación de diferentes dispositivos para mejorar la calidad de enseñanza de estudiantes con habilidades diferentes, lo cual muestra más allá de una nueva técnica ya que apela a modernizar las formas de impartir conocimiento sino que también a pensar en aquellos que no comparten las mismas capacidades, y para lograr esto ha creado algunos juegos para los niños usando plataformas ya creadas como el nintendo Wii.
+
+%------------ Paragraph ------------------------
+El autor de la Maza[8] plantea una posición más simple que es basar sus actividades en juegos de mesa debido a que usa su concepto simple y mecánicas fáciles para representarlo en forma de videojuegos debido a que no se necesita algo muy saturado de información lo cual es un punto importante en el diseño de interfaces el mantener las cosas simples pero sin perder su nivel de  eficiencia.
+
+%------------ Paragraph ------------------------
+El autor Carrasco[9] también presenta una postura dirigida hacia aquellos con capacidades diferentes nos solo implementando software sino hardware para estudiantes con características diferentes a las comunes.
+\section{Implementación}
+La forma en la cual se podría implementar serían como un taller extra para las sesiones de clase de nivel primario o superior 
+debido a que en este periodo de la vida normalmente es donde surge ese interés por los videojuegos y ese aborrecimiento hacia la 
+escuela, además se tiene que implementar de forma dinámica para crear ese ambiente motivacional porque al darle una perspectiva 
+teórica pierde completamente el propósito. 
+\section{Comparación}
+Este apartado mostrará algunas implicaciones sobre los videojuegos como herramienta para el aprendizaje, y cada una será 
+detallada de la forma como ocurrió, así como también las conclusiones finales de cada una.
+\subsection{Estimulación Emocional de los Videojuegos: Efectos en el Aprendizaje} 
+Marcano [10] proyecta un evidente impacto dependiendo de aspectos personales e individuales basado en los gustos de una persona, 
+pero existen factores que hacen a los videojuegos atractivos. Los factores que destaca el autor son: La posibilidad de 
+competición, el reto, la posibilidad de interactuar, las acciones que permite hacer y las emociones que permita vivir.
+  
+%------------ Paragraph ------------------------
+Así mismo los sentidos se vuelven un aspecto muy importante, y de tal manera los ambientes virtuales, que los sonidos sean muy  realistas, como una persona va interactuar con el entorno generan una emociones.
+
+%------------ Paragraph ------------------------ 
+De tal manera los videojuegos se convierten en herramienta de multi estimulación cognitiva la cual va a ser importante para el 
+aprendizaje, así mismo genera placer el cual es muy importante para que la persona se sienta augusta, también generando un 
+pensamiento estratégico y creativo.  
+
+%------------ Paragraph ------------------------ 
+Además se va a favorecer el aumento de la autoestima, motivacion de logro, el desarrollo de actividades directivas, y el trabajo 
+en equipo. Así de tal manera debe ser usado en la educación porque presenta un gran potencial para el aprendizaje que puede 
+desarrollarse en distintas áreas.  
+
+\subsection{Emociones con Videojuegos: Incrementando la Motivación para el Aprendizaje }
+González y Blanco[11] muestran en su trabajo a través de una experiencia que los videojuegos presentan un gran atractivo y 
+generan motivación para generar una conexión con la propia dinámica que este presenta. De tal manera que esta va a mostrar un 
+carácter lúdico y que va a entretener, además también que genere estímulos como los visuales, auditivos, kinestésicos.  
+
+%------------ Paragraph ------------------------ 
+Estos estímulos influyen mucho que el jugador pueda desarrollarse personalmente, también superarse personalmente, asimismo puede ser un papel clave para el desarrollo de la autoestima. En otro contexto, el autor hace mención a la psicología cognitiva donde los factores humanos hacen presente una interacción con los ordenadores.
+ 
+Esta experiencia fue realizada con 23 estudiantes del curso de Interacción Hombre Máquina de la Escuela Técnica Superior de Ingeniería Informática de la Universidad de La Laguna. Cada estudiante tenía que escribir un blog donde indicaba su progreso, las dificultades y cómo percibieron el videojuego. Así mismo se tomó otras características como el registro propio del videojuego donde incluía conversaciones, rutas, etc. 
+
+La experiencia en primera instancia al inicio el carácter lúdico, y que no sea una actividad a realizarse seriamente se mostró notoriamente, pero esto tuvo una cierta implicación por la dificultad de la propia interfaz, donde se había mostrado una cierta dificultad de adaptación de los estudiantes. Al final del primer día se mostró una carencia en la parte comunicativa.
+
+En el segundo día ya se había mejorado la parte de comunicación presentado una evidente mejora y satisfacción al momento de jugar mostrando una gran capacidad para que ellos se coordinen y puedan enfrentar cada reto. Y en el último día ya se observó una gran adaptación hacia la interfaz y que los estudiantes presentaban.
+
+Los test presentan que la actividad les generó un grado de satisfacción y diversión al momento de poder jugarlo, así mismo en menor medida pero presente se mostró un cierto grado de hostilidad, y también existe un cierto grado de frustración. 
+
+Como conclusión se muestra que las emociones pueden influir de una manera positiva o negativa en la persona, y los videojuegos que influyen en la educación tendrán una implicación con respecto a esas emociones. También los factores de satisfacción se vuelven muy importantes para que los jugadores que serían los estudiantes sean constantes al momento de aprender. 
+
+También que la forma emocional que los videojuegos generan, ya sea misterio, sorpresa, pueden influir mucho a que los estudiantes se mantengan constantes. Y que una actividad lúdica como los videojuegos es una fuente efusiva muy grande.
+\section{Propuesta}
+Después de todo el proceso de análisis y comparación, se debe llegar a una opción aplicable en el contexto estudiantil peruano, para lo cual planteamos una serie de actividades para causar dicha motivación en los estudiantes.
+\section{Desarrollo}
+\subsection{Análisis de Juegos}
+Se puede elegir un juego de acceso libre o simple para que los estudiantes lo describen tanto como se sienten observando su interfaz y describiendo el cómo se siente respecto a ella. 
+\subsection{Descripción de Información}
+La información de un interfaz puede ser o muy escasa o muy abundante y esto varía entre los tipos de juego como los shooters(Counter Strike, Call of Duty, Halo, etc) y los MOBAS(DOTA 2, League of Legends, Heroes of the Storm, etc).
+\subsection{Psicología de Colores}
+El manejo adecuado de colores obtener datos de un campo probado en el contexto de la sociedad peruana con la probabilidad de postularse como un plan integrable a la rúbrica de estudios mejorando y modernizando la forma de impartir conocimiento en el país. 
+Puede dar una ambientación completamente diferente a cualquier imagen por lo cual el manejo de iluminación y tonos es útil para dar mayor profundidad a una interfaz. 
+\section{Resultados}
+La examinación anterior ha probado que el uso de videojuegos en un ámbito educacional no solo resulta motivacional para los estudiantes que trabajan con estas nueva técnicas sino que también ayuda a mejorar el entendimiento y la retención de conocimiento de los temas teóricos y al mismo tiempo ayuda a generar conocimientos del manejo de la tecnología como herramienta. 
+\section{Trabajos Futuros}
+Lo más adecuado que se podría hacer sería el estructurar la propuesta como un verdadero plan de estudios el cual pueda aplicarse como un experimento del cual se pueda obtener resultados verídicos y de los cuales podamos detectar aciertos y desaciertos. 
+
+
+%\subsubsection{Subsubsection Heading Here}
+%Subsubsection text here.
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command, the
+% \label for the overall figure must come after \caption.
+% \hfil must be used as a separator to get equal spacing.
+% The subfigure.sty package works much the same way, except \subfigure is
+% used instead of \subfloat.
+%
+%\begin{figure*}[!t]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+
+
+% An example of a floating table. Note that, for IEEE style tables, the 
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that IEEE does not put floats in the very first column - or typically
+% anywhere on the first page for that matter. Also, in-text middle ("here")
+% positioning is not used. Most IEEE journals/conferences use top floats
+% exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the \fnbelowfloat
+% command of the stfloats package.
+
+%\section{Conclusion}
+%The conclusion goes here.
+% conference papers do not normally have an appendix
+
+% use section* for acknowledgement
+%\section*{Acknowledgment}
+
+%The authors would like to thank...
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+
+\begin{thebibliography}{1}
+		
+\bibitem{Albornoz2014}
+M. C. Albornoz, “Diseño de Interfaz Gráfica de Usuario,” 2014.
+
+\bibitem{Legeren-lago2019}
+B. Legerén-lago, “Marco para la adaptación de las características de la
+	retórica a los elementos de construcción del videojuego,” no. June, pp.
+	19–22, 2019.
+	
+\bibitem{Gros2007}
+B. Gros, “The design of learning environments using videogames in
+	formal education,” Proc. - Digit. 2007 First IEEE Int. Work. Digit.
+	Game Intell. Toy Enhanc. Learn., pp. 19–24, 2007, doi:
+	10.1109/DIGITEL.2007.48.
+	
+\bibitem{CEA2020}
+“VIDEO GAME | meaning in the Cambridge English Dictionary.”
+https://dictionary.cambridge.org/dictionary/english/video-game
+(accessed Nov. 21, 2020).
+
+\bibitem{RAE2020}
+“videojuego | Definición | Diccionario de la lengua española | RAE -
+ASALE.” https://dle.rae.es/videojuego?m=form (accessed Nov. 21,
+2020).
+
+\bibitem{Ralph2015}
+P. Ralph and K. Monu, “Toward a Unified Theory of Digital Games,”\emph{
+Comput. Games J.}, vol. 4, no. 1–2, pp. 81–100, 2015, doi:
+10.1007/s40869-015-0007-7.
+
+\bibitem{Gonzalez}
+J. L. Gonzalez, M. J. Cabrera, and F. L. Gutierrez, “Diseño de
+videojuegos aplicados a la Educación Especial,” \emph{Sin Nr.}, no. May, pp.
+1–10, 2007.
+
+\bibitem{Jos2018}
+A. J. Planells de la Maza, “Uso de juegos de mesa en el diseño de
+videojuegos: una experiencia universitaria,” \emph{Estud. pedagógicos }, vol. 44,
+no. 1, pp. 415–426, 2018, doi: 10.4067/s0718-07052018000100415.
+
+\bibitem{carrasco2020}
+E. A. E. Carrasco, “Videojuego educativo para el desarrollo del
+pensamiento geométrico en niños con discapacidad visual memoria,”
+2020.
+
+\bibitem{Marcano2014}
+B. Marcano, “Estimulación emocioal de los videojuegos: efectos en el
+aprendizaje,” Educ. Knowl. Soc., vol. 7, no. 2, p. 8, 2006.
+
+\bibitem{blanco2008}
+C. González and F. Blanco, “Emociones con videojuegos:
+incrementando la emoción para el aprendizaje,” Teoría la Educ. Educ. y
+Cult. en la …, vol. 9, pp. 69–92, 2008
+\end{thebibliography}
+\end{document}
